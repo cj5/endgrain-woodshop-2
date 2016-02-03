@@ -1,0 +1,93 @@
+body {
+    font-family: $raleway;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.logo-wrapper {
+    height: 275px;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    img {
+        position: absolute;
+        width: 100px;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.title {
+    h1 {
+        text-align: center;
+        color: black;
+        font-size: 22px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 30px 0;
+    }
+}
+
+.nav {
+    background-color: $nav-back;
+    ul {
+        text-align: center;
+        margin: 10px 0;
+    }
+    li {
+        display: inline;
+        margin: 0 15px;
+    }
+    a {
+        color: $gold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+.products {
+    text-align: center;
+    margin: 30px 0;
+    img {
+        margin-top: 10px;
+    }
+}
+
+footer {
+    background-color: $nav-back;
+    height: 200px;
+    ul {
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    li {
+        margin-top: 20px;
+    }
+    a {
+        text-transform: uppercase;
+        color: black;
+        font-size: 25px;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+}
+
+.black:hover {
+    color: black;
+    text-decoration: none;
+}
+
