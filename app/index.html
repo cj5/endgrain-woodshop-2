@@ -34,16 +34,22 @@
     <header class="logo-wrapper">
         <img src="images/endgrain-logo-2.png">   
     </header>
-    <section class="title">
-        <h1>endgrain woodshop</h1>
-    </section>
-    <section class="nav">
-        <ul>
-            <li><a class="black" href="#p-link">Products</a></li>
-            <li><a class="black" href="#s-link">Story</a></li>
-            <li><a class="black" href="#c-link">Contact</a></li>
-        </ul>
-    </section>
+    <div class="skip-fix-title">
+        <section class="title">
+            <h1><a href="index.html">endgrain woodshop</a></h1>
+        </section>
+    </div>
+    <div class="skip-fix-nav">
+        <nav class="nav">
+            <ul>
+                <li><a class="black" href="#p-link">Products</a></li>
+                <li><a class="black" href="#s-link">Story</a></li>
+                <li><a class="black" href="#c-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div id="p-link"></div>
     <section class="products container">
         <img src="images/board-2.jpg">
         <img src="images/board-3.jpg">
@@ -51,8 +57,32 @@
         <img src="images/board-3.jpg">
     </section>
 
+    <div id="s-link"></div>
+    <section class="story">
+        <h2>our story</h2>
+        <p class="container">Endgrain Woodshop, located in Minneapolis, MN, began from a shared passion between my wife and me for creating beautiful and practical crafts out of wood. We love every step of the process, from transforming rough reclaimed wood into square, finished lumber, to gluing up, sanding, and staining the finished product. We’re constantly brainstorming new, fun projects to complete and working to improve our shop tools and processes.</p>
+    </section>
+
+    <div id="c-link"></div>
+    <section class="contact">
+        <h2>contact us</h2>
+        <div class="contact-item col-xs-2">
+            <ul>
+                <li>Email</li>
+                <li>Etsy</li>
+            </ul>
+        </div>
+        <div class="contact-link col-xs-10">
+            <ul>
+                <li><a href="mailto:info@endgrainwoodshop.com">info@endgrainwoodshop.com</a></li>
+                <li><a href="https://www.etsy.com/shop/EndgrainWoodshop?ref=search_shop_redirect">etsy.com/endgrain-woodshop</a></li>
+            </ul>
+        </div>
+    </section>
+
     <footer>
         <ul>
+            <li><a href="index.html">home</a></li>
             <li><a href="products.html">products</a></li>
             <li><a href="story.html">story</a></li>
             <li><a href="contact.html">contact</a></li>
@@ -94,5 +124,55 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <script>
+        $(document).ready(function() {
+      
+      $(window).scroll(function () {  
+          console.log($(window).scrollTop())
+        if ($(window).scrollTop() > 275) {
+          $('.nav').addClass('nav-fixed');
+        }
+        if ($(window).scrollTop() < 274) {
+          $('.nav').removeClass('nav-fixed');
+        }
+      });
+    });
+    </script>
+    <script>
+        $(document).ready(function() {
+      
+      $(window).scroll(function () {  
+          console.log($(window).scrollTop())
+        if ($(window).scrollTop() > 275) {
+          $('.title').addClass('title-fixed');
+        }
+        if ($(window).scrollTop() < 274) {
+          $('.title').removeClass('title-fixed');
+        }
+      });
+    });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+      $('a[href*=#]').each(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        && location.hostname == this.hostname
+        && this.hash.replace(/#/,'') ) {
+          var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+          var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+           if ($target) {
+             var targetOffset = $target.offset().top;
+             $(this).click(function() {
+               $('html, body').animate({scrollTop: targetOffset}, 400);
+               return false;
+             });
+          }
+        }
+      });
+    });
+    </script>
+
   </body>
 </html>
