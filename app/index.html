@@ -25,18 +25,18 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 
   </head>
-  <body>
+  <body class="fade-in">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    
+    <div id="index"></div>
     <header class="logo-wrapper">
         <img src="images/endgrain-logo-2.png">   
     </header>
     <div class="skip-fix-title">
         <section class="title">
-            <h1><a href="index.html">endgrain woodshop</a></h1>
+            <h1><a class="fade-in slow" href="index.html">endgrain woodshop</a></h1>
         </section>
     </div>
     <div class="skip-fix-nav">
@@ -82,10 +82,10 @@
 
     <footer>
         <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="products.html">products</a></li>
-            <li><a href="story.html">story</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a href="#index">^</a></li>
+            <!-- <li><a href="#p-link">products</a></li>
+            <li><a href="#s-link">story</a></li>
+            <li><a href="#c-link">contact</a></li> -->
         </ul>
     </footer>
 
@@ -155,24 +155,13 @@
     </script>
 
     <script>
-        $(document).ready(function() {
-      $('a[href*=#]').each(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-        && location.hostname == this.hostname
-        && this.hash.replace(/#/,'') ) {
-          var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-          var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-           if ($target) {
-             var targetOffset = $target.offset().top;
-             $(this).click(function() {
-               $('html, body').animate({scrollTop: targetOffset}, 400);
-               return false;
-             });
-          }
-        }
-      });
-    });
-    </script>
+        $('a').click(function(){
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 500);
+            return false;
+        });
+    </script
 
   </body>
 </html>
