@@ -43,7 +43,8 @@ li {
     position: relative;
     img {
         position: absolute;
-        width: 100px;
+        width: 20%;
+        min-width: 120px;
         margin: auto;
         top: 0;
         left: 0;
@@ -281,6 +282,7 @@ a:hover {
     }
     .logo-wrapper img {
         width: 20%;
+        max-width: 220px;
     }
 }
 
