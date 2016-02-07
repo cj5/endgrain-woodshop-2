@@ -30,25 +30,29 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <div id="index"></div>
-    <header class="logo-wrapper">
-        <img src="images/endgrain-logo-2.png">   
-    </header>
-    <div class="skip-fix-title">
-        <section class="title">
-            <h1><a class="fade-in slow" href="index.html">endgrain woodshop</a></h1>
-        </section>
-    </div>
-    <div class="skip-fix-nav">
-        <nav class="nav">
-            <ul>
-                <li><a class="black" href="#p-link">Products</a></li>
-                <li><a class="black" href="#s-link">Story</a></li>
-                <li><a class="black" href="#c-link">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+     <div class="landing-page">   
+        <div id="index"></div>
+        <header class="logo-wrapper">
+            <img src="images/endgrain-logo-2.png">   
+        </header>
+        <div class="skip-fix-title">
+            <section class="title">
+                <h1><a class="fade-in slow" href="index.html">endgrain woodshop</a></h1>
+            </section>
+        </div>
+        <div class="skip-fix-nav">
+            <nav class="nav">
+                <ul>
+                    <li><a class="black" href="#p-link">Products</a></li>
+                    <li><a class="black" href="#s-link">Story</a></li>
+                    <li><a class="black" href="#c-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>    
     
+    <!-- PRODUCTS -->
+
     <div id="p-link"></div>
     <section class="products container">
         <img src="images/board-2.jpg">
@@ -57,14 +61,18 @@
         <img src="images/board-3.jpg">
     </section>
 
+    <!-- STORY -->
+
     <div id="s-link"></div>
     <section class="story">
         <h2>our story</h2>
         <p class="container">Endgrain Woodshop, located in Minneapolis, MN, began from a shared passion between my wife and me for creating beautiful and practical crafts out of wood. We love every step of the process, from transforming rough reclaimed wood into square, finished lumber, to gluing up, sanding, and staining the finished product. We’re constantly brainstorming new, fun projects to complete and working to improve our shop tools and processes.</p>
     </section>
 
+    <!-- CONTACT -->
+
     <div id="c-link"></div>
-    <section class="contact">
+    <section class="contact container">
         <h2>contact us</h2>
         <div class="contact-item col-xs-2">
             <ul>
@@ -79,6 +87,8 @@
             </ul>
         </div>
     </section>
+
+    <!-- FOOTER -->
 
     <footer>
         <ul>
@@ -161,7 +171,41 @@
             }, 500);
             return false;
         });
-    </script
+    </script>
+
+    <script>
+
+    $(document).ready(function () {
+        updateContainer();
+        $(window).resize(function() {
+            updateContainer();
+        });
+    });
+    function updateContainer() {
+        var $containerHeight = $(window).height();
+        var theHeight = $(window).height() - 156;
+        var navHeight = $(window).height() - 
+
+        $(".logo-wrapper").css("height", theHeight);
+
+
+        // if ($containerHeight <= 818) {
+        //     $('.footer').css({
+        //         position: 'static',
+        //         bottom: 'auto',
+        //         left: 'auto'
+        //     });
+        // }
+        // if ($containerHeight > 819) {
+        //     $('.footer').css({
+        //         position: 'absolute',
+        //         bottom: '3px',
+        //         left: '0px'
+        //     });
+        // }
+    }
+
+    </script>
 
   </body>
 </html>
