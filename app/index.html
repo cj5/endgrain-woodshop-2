@@ -39,8 +39,8 @@
             <section class="title">
                 <h1><a class="fade-in slow" href="index.html">endgrain woodshop</a></h1>
             </section>
-        </div>
-        <div class="skip-fix-nav">
+        <!-- </div> -->
+        <!-- <div class="skip-fix-nav"> -->
             <nav class="nav">
                 <ul>
                     <li><a class="black" href="#p-link">Products</a></li>
@@ -135,77 +135,7 @@
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
-    <script>
-        $(document).ready(function() {
-      
-      $(window).scroll(function () {  
-          console.log($(window).scrollTop())
-        if ($(window).scrollTop() > 275) {
-          $('.nav').addClass('nav-fixed');
-        }
-        if ($(window).scrollTop() < 274) {
-          $('.nav').removeClass('nav-fixed');
-        }
-      });
-    });
-    </script>
-    <script>
-        $(document).ready(function() {
-      
-      $(window).scroll(function () {  
-          console.log($(window).scrollTop())
-        if ($(window).scrollTop() > 275) {
-          $('.title').addClass('title-fixed');
-        }
-        if ($(window).scrollTop() < 274) {
-          $('.title').removeClass('title-fixed');
-        }
-      });
-    });
-    </script>
-
-    <script>
-        $('a').click(function(){
-            $('html, body').animate({
-                scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 500);
-            return false;
-        });
-    </script>
-
-    <script>
-
-    $(document).ready(function () {
-        updateContainer();
-        $(window).resize(function() {
-            updateContainer();
-        });
-    });
-    function updateContainer() {
-        var $containerHeight = $(window).height();
-        var theHeight = $(window).height() - 156;
-        var navHeight = $(window).height() - 
-
-        $(".logo-wrapper").css("height", theHeight);
-
-
-        // if ($containerHeight <= 818) {
-        //     $('.footer').css({
-        //         position: 'static',
-        //         bottom: 'auto',
-        //         left: 'auto'
-        //     });
-        // }
-        // if ($containerHeight > 819) {
-        //     $('.footer').css({
-        //         position: 'absolute',
-        //         bottom: '3px',
-        //         left: '0px'
-        //     });
-        // }
-    }
-
-    </script>
+    
 
   </body>
 </html>

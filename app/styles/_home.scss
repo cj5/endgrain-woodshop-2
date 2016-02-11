@@ -89,7 +89,7 @@ li {
 }
 
 .skip-fix-title {
-    // height: 60px;
+    height: 107px;
 }
 
 // NAV BAR -------------------------
@@ -123,11 +123,11 @@ li {
     z-index: 100;
     position: fixed;
     width: 100%;
-    opacity: 0.95;
+    opacity: 0.99;
 }
 
 .skip-fix-nav {
-    height: 40px;
+    height: 0px;
 }
 
 
@@ -135,7 +135,7 @@ li {
 
 .products {
     text-align: center;
-    margin: 30px 0;
+    margin: 60px 0;
     img {
         margin-top: 4px;
     }
@@ -167,15 +167,15 @@ li {
 }
 
 #s-link {
-    padding-top: 60px;
-    margin-top: -60px;
+    padding-top: 70px;
+    margin-top: -70px;
 }    
 
 
 // CONTACT SECTION -------------------
 
 .contact {
-    height: 140px;
+    height: 200px;
     h2 {
         position: relative;
         width: 100%;
