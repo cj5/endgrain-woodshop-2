@@ -37,7 +37,7 @@ li {
 // LOGO HEADER ----------------------
 
 .logo-wrapper {
-    height: 275px;
+    // height: 275px;
     width: 100%;
     background-color: black;
     position: relative;
@@ -56,12 +56,14 @@ li {
 // PAGE TITLE ----------------------
 
 .title {
+    position: relative;
     height: 110px;
+    background-color: white;
     h1 {
         text-align: center;
         width: 100%;
         font-size: 22px;
-        font-weight: 600;
+        font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 2px;
         margin: 0;
@@ -95,6 +97,7 @@ li {
 // NAV BAR -------------------------
 
 .nav {
+    position: relative;
     height: 46px;
     background-color: $nav-back;
     ul {
@@ -112,9 +115,9 @@ li {
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 12px;
-            font-weight: 400;
+            font-weight: 500;
             transition: all .2s ease-in-out;
-        }       
+        }      
     }
 }
 
@@ -123,7 +126,6 @@ li {
     z-index: 100;
     position: fixed;
     width: 100%;
-    opacity: 0.99;
 }
 
 .skip-fix-nav {
@@ -134,16 +136,17 @@ li {
 // PRODUCTS SECTION -------------------
 
 .products {
+    
     text-align: center;
-    margin: 60px 0;
+    padding-top: 100px;
     img {
         margin-top: 4px;
     }
 }
 
 #p-link {
-    padding-top: 91px;
-    margin-top: -91px;
+    padding-top: 41px;
+    margin-top: -41px;
 }
 
 // STORY SECTION ---------------------
@@ -156,12 +159,12 @@ li {
         font-size: 20px;
         text-transform: uppercase;
         text-align: center;
-        margin: 50px 0 10px 0;
+        margin: 50px 0 20px 0;
     }
     p {
         color: black;
         font-size: 14px;
-        line-height: 23px;
+        line-height: 27px;
         margin-bottom: 50px;
     }
 }
@@ -190,32 +193,43 @@ li {
         line-height: 28px;
     }
 
+    .contact-link {
+            margin: 0 -10px;
+            a {
+                color: $gold;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+            }
+            a:visited {
+                color: $gold;
+                text-decoration: none;
+            }
+            .black:hover {
+                color: black;
+                text-decoration: none;
+            }
+    } 
+
     .contact-item {
         padding: 0;
-    }
+    }    
+}
 
-    .contact-link {
-        margin: 0 -10px;
-        a {
-            color: $gold;
-            text-decoration: none;
-        }
-        a:visited {
-            color: $gold;
-            text-decoration: none;
-        }
-    }
+       
+
 #c-link {
     padding-top: 91px;
     margin-top: -91px;
 }    
-}
+
 
 // FOOTER SECTION ----------------------
 
 footer {
     background-color: $nav-back;
     height: 100px;
+    position: relative;
+    z-index: 200;
     ul {
         text-align: center;
         position: relative;
@@ -241,35 +255,24 @@ footer {
 
 // HOVER CLASSES ----------------------
 
-a:hover {
+a:hover, a:focus {
     color: black;
     text-decoration: none;
-}
-
-// .black:hover {
-//     color: black;
-//     text-decoration: none;
-// }
-
-// SCREEN SIZE DESIGNATION
-
-.screen-size p {
-    position: relative;
-    color: gray;
 }
 
 // SMALL TABLET ----------------------------
 @media screen and (min-width: 480px) {
     .title h1 a {
-        color: red;
+        // color: red;
+        font-size: 30px;
     }
 }
 
 // LARGE TABLET --------------------------------
 @media screen and (min-width: 768px) {
     .title h1 a {
-        color: orange;
-        font-size: 30px;
+        // color: black;
+        font-size: 35px;
     }
     .title {
         height: 110px;
@@ -279,30 +282,61 @@ a:hover {
         li a {
             margin: 0 16px;
         }
+        .black:hover {
+            color: black;
+            text-decoration: none;
+        }
     }
     .logo-wrapper img {
         width: 20%;
         max-width: 220px;
+    }
+    .story {
+        h2 {
+            text-align: left;
+            margin: 100px 0 20px 0;
+            font-size: 22px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+    .contact {
+        h2 {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+    }
+    .products {
+        img:hover {
+            opacity: 0.7;
+            transition: opacity 0.2s ease-in-out;
+        }
     }
 }
 
 // SMALL LAPTOP/DESKTOP -----------------------
 @media screen and (min-width: 992px) {
     .title h1 a {
-        color: yellow;
+        // color: yellow;
     }
 }    
 
 // MEDIUM LAPTOP/DESKTOP ----------------------
 @media screen and (min-width: 1200px) {
     .title h1 a {
-        color: green;
+        // color: green;
+    }
+    .container {
+        max-width: 1050px;
     }
 }       
 
 // LARGE LAPTOP/DESKTOP -----------------------
 @media screen and (min-width: 1400px) {
     .title h1 a {
-        color: blue;
+        // color: blue;
     }
 }      
